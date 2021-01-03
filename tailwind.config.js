@@ -10,6 +10,16 @@ module.exports = {
       },
       colors: {
          red: 'red',
+         white: '#fff',
+         black: '#000',
+         gray: {
+            50: '#efefef',
+            100: '#e0e0e0',
+            200: '#d0d0d0',
+            700: '#6b6b6b',
+            800: '#232323',
+            900: '#171717',
+         },
       },
       fontFamily: {
          sans: ['Graphik', 'sans-serif'],
@@ -29,4 +39,4 @@ module.exports = {
       extend: {},
    },
    plugins: [],
-};
+}

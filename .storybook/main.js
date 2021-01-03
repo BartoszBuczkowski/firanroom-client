@@ -1,8 +1,8 @@
-const { TsConfigPathsPlugin } = require('awesome-typescript-loader');
+const { TsConfigPathsPlugin } = require('awesome-typescript-loader')
 
 module.exports = {
    stories: ['../src/components/**/*.stories.@(js|jsx|ts|tsx)'],
-   addons: ['@storybook/addon-actions', '@storybook/addon-links', '@storybook/addon-essentials'],
+   addons: ['@storybook/addon-links', '@storybook/addon-essentials'],
    typescript: {
       reactDocgen: 'react-docgen-typescript',
       reactDocgenTypescriptOptions: {
@@ -22,10 +22,10 @@ module.exports = {
       },
    },
    webpackFinal: async (config) => {
-      config.resolve.extensions.push('.ts', '.tsx');
+      config.resolve.extensions.push('.ts', '.tsx')
 
-      config.resolve.plugins.push(new TsConfigPathsPlugin());
+      config.resolve.plugins.push(new TsConfigPathsPlugin())
 
-      return config;
+      return config
    },
-};
+}
