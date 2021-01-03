@@ -1,7 +1,7 @@
-import React from 'react';
+import { FC } from 'react';
 
-const Button = () => {
-   return <button>elo</button>;
+const Button: FC<{ text?: string }> = ({ text }) => {
+   return <button>a{text}</button>;
 };
 
 export default Button;
