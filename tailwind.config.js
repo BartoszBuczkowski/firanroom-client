@@ -13,6 +13,7 @@ module.exports = {
          white: '#fff',
          black: '#000',
          gray: {
+            20: '#fafafa',
             50: '#efefef',
             100: '#e0e0e0',
             200: '#d0d0d0',
@@ -22,7 +23,8 @@ module.exports = {
          },
       },
       fontFamily: {
-         sans: ['Graphik', 'sans-serif'],
+         sans: ['Ubuntu', 'sans-serif'],
+         // sans: ['Graphik', 'sans-serif'],
          serif: ['Merriweather', 'serif'],
       },
       extend: {

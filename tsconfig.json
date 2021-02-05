@@ -15,14 +15,16 @@
       "isolatedModules": true,
       "baseUrl": ".",
       "paths": {
-         "@atoms/*": ["src/components/atoms/*"],
-         "@molecules/*": ["src/components/molecules/*"],
-         "@organisms/*": ["src/components/organisms/*"],
-         "@pages/*": ["src/components/pages/*"],
-         "@templates/*": ["src/components/templates/*"],
-         "@styles/*": ["./styles/*"]
+         "@/atoms/*": ["src/components/atoms/*"],
+         "@/molecules/*": ["src/components/molecules/*"],
+         "@/organisms/*": ["src/components/organisms/*"],
+         "@/pages/*": ["src/components/pages/*"],
+         "@/templates/*": ["src/components/templates/*"],
+         "@/styles/*": ["./styles/*"],
+         "@/helpers/*": ["src/helpers/*"],
+         "@/assets/*": ["src/assets/*"]
       }
    },
    "exclude": ["node_modules"],
-   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
+   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "custom.d.ts"]
 }

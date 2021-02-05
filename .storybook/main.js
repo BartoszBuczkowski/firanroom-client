@@ -1,31 +1,7 @@
-const { TsConfigPathsPlugin } = require('awesome-typescript-loader')
+const path = require('path')
 
 module.exports = {
-   stories: ['../src/components/**/*.stories.@(js|jsx|ts|tsx)'],
+   stories: ['../src/components/**/**/*.stories.tsx'],
    addons: ['@storybook/addon-links', '@storybook/addon-essentials'],
-   typescript: {
-      reactDocgen: 'react-docgen-typescript',
-      reactDocgenTypescriptOptions: {
-         compilerOptions: {
-            allowSyntheticDefaultImports: false,
-            esModuleInterop: false,
-         },
-      },
-      baseUrl: '.',
-      paths: {
-         '@atoms/*': ['src/components/atoms/*'],
-         '@molecules/*': ['src/components/molecules/*'],
-         '@organisms/*': ['src/components/organisms/*'],
-         '@pages/*': ['src/components/pages/*'],
-         '@templates/*': ['src/components/templates/*'],
-         '@styles/*': ['styles/templates/*'],
-      },
-   },
-   webpackFinal: async (config) => {
-      config.resolve.extensions.push('.ts', '.tsx')
-
-      config.resolve.plugins.push(new TsConfigPathsPlugin())
-
-      return config
-   },
+   presets: [path.resolve(__dirname, './next-preset.js')],
 }

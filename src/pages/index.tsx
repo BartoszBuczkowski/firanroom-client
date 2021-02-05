@@ -1,5 +1,5 @@
-import Button from '@atoms/Button/Button';
-import Head from 'next/head';
+import Button from '@/atoms/Button/Button'
+import Head from 'next/head'
 
 export default function Home() {
    return (
@@ -11,5 +11,5 @@ export default function Home() {
 
          <Button />
       </div>
-   );
+   )
 }

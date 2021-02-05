@@ -1,12 +1,12 @@
 .button {
-   @apply text-sm font-medium px-4 py-1 leading-6 border border-gray-900 rounded border-opacity-0 focus:outline-none transition;
-   & .primary {
-      @apply text-gray-900 bg-gray-900 bg-opacity-5 hover:shadow;
+   @apply subpixel-antialiased text-sm font-medium px-4 py-1 leading-6 border border-gray-900 rounded border-opacity-0 focus:outline-none transition-transform duration-75 transform hover:scale-95;
+   &--primary {
+      @apply text-gray-900 bg-gray-900 bg-opacity-5;
    }
-   & .secondary {
-      @apply text-gray-900 border-opacity-20 hover:shadow;
+   &--secondary {
+      @apply text-gray-900 border-opacity-20;
    }
-   & .secondary-alt {
+   &--secondary-alt {
       @apply text-center text-white bg-gray-900 shadow hover:shadow-lg hover:bg-black;
    }
 }

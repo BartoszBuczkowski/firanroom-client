@@ -1,19 +1,40 @@
 {
    "compilerOptions": {
-      "target": "es5",
-      "lib": ["dom", "dom.iterable", "esnext"],
       "allowJs": true,
-      "skipLibCheck": true,
-      "strict": false,
-      "forceConsistentCasingInFileNames": true,
-      "noEmit": true,
+      "alwaysStrict": true,
       "esModuleInterop": true,
+      "allowSyntheticDefaultImports": true,
+      "forceConsistentCasingInFileNames": true,
+      "isolatedModules": true,
+      "jsx": "preserve",
+      "lib": ["dom", "dom.iterable", "es2019"],
       "module": "esnext",
       "moduleResolution": "node",
+      "noEmit": true,
+      "noFallthroughCasesInSwitch": true,
+      "noUnusedLocals": true,
+      "noUnusedParameters": true,
       "resolveJsonModule": true,
-      "isolatedModules": true,
-      "jsx": "react"
+      "skipLibCheck": true,
+      "strict": true,
+      "target": "esnext",
+      "baseUrl": "../",
+      "paths": {
+         "@/assets/*": ["src/assets/*"],
+         "@/styles/*": ["src/styles/*"],
+         "@/atoms/*": ["src/components/atoms/*"],
+         "@/molecules/*": ["src/components/molecules/*"],
+         "@/organisms/*": ["src/components/organisms/*"],
+         "@/templates/*": ["src/components/templates/*"],
+         "@/helpers/*": ["src/helpers/*"]
+      }
    },
    "exclude": ["node_modules"],
-   "include": ["../types.d.ts", "../next-env.d.ts", "../**/*.stories.ts", "../**/*.stories.tsx"]
+   "include": [
+      "../next-env.d.ts",
+      "../assets.d.ts",
+      "../src/**/*.stories.ts",
+      "../src/**/*.stories.tsx",
+      "../custom.d.ts"
+   ]
 }

@@ -1,19 +1,21 @@
 import { FC, ReactNode } from 'react'
 import clsx from 'clsx'
-import styles from './Button.module.scss'
+import css from './Button.module.scss'
 
 export interface ButtonProps {
    children: ReactNode
    variant: 'primary' | 'secondary' | 'secondary-alt'
+   fullWidth?: boolean
 }
 
-const Button: FC<ButtonProps> = ({ children, variant }) => {
+const Button: FC<ButtonProps> = ({ children, variant, fullWidth }) => {
    return (
       <button
-         className={clsx(styles['button'], {
-            [styles['primary']]: variant === 'primary',
-            [styles['secondary']]: variant === 'secondary',
-            [styles['secondary-alt']]: variant === 'secondary-alt',
+         className={clsx(css.button, {
+            [css['button--primary']]: variant === 'primary',
+            [css['button--secondary']]: variant === 'secondary',
+            [css['button--secondary-alt']]: variant === 'secondary-alt',
+            'w-full': fullWidth,
          })}
       >
          {children}
