@@ -1,5 +1,5 @@
 import { Meta, Story } from '@storybook/react/types-6-0'
-import _Button, { ButtonProps } from './Button'
+import _Button, { ButtonProps } from '../Button'
 
 export default {
    title: 'Atoms/Button',

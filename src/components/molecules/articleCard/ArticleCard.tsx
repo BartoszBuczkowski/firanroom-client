@@ -1,4 +1,7 @@
+import Avatar from '@/atoms/Avatar/Avatar'
 import { FC } from 'react'
+import formatDate from '@/utils/formatDate'
+import Text from '@/atoms/Text/Text'
 
 interface ArticleCardProps {
    image: string
@@ -22,19 +25,20 @@ const ArticleCard: FC<ArticleCardProps> = ({
    author,
 }) => {
    return (
-      <div>
-         <div className="flex">
-            <div className="flex">
-               <img src={authorAvatar} alt={author} />
-               <p>{author}</p>
-            </div>
-            <div>{createdAt}</div>
+      <div className="max-w-3xl border border-gray-50 rounded-md p-2">
+         <div className="flex items-center justify-between mb-2">
+            <Avatar image={authorAvatar} name={author} withText />
+            <p className="text-2xs text-gray-700">Dodano: {formatDate(createdAt)}</p>
          </div>
-         <img src={image} alt={title} />
-         <h1>{title}</h1>
-         <h3>{description}</h3>
-         <span>{commentsNumber}</span>
-         <span>{liked}</span>
+         <img src={image} alt={title} className="w-full rounded-md max-h-52 object-cover" />
+         <div className="flex flex-col space-y-2 my-2 mx-4">
+            <Text variant="h1">{title}</Text>
+            <Text variant="p">{description}</Text>
+         </div>
+         <div className="flex mx-4 justify-between text-xs">
+            <span>Komentarzy: {commentsNumber}</span>
+            <span>{liked && 'lubisz to'}</span>
+         </div>
       </div>
    )
 }

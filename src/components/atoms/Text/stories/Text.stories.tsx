@@ -1,5 +1,5 @@
 import { Meta, Story } from '@storybook/react/types-6-0'
-import _Text, { TextProps } from './Text'
+import _Text, { TextProps } from '../Text'
 
 export default {
    title: 'Atoms/Text',

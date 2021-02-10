@@ -18,6 +18,7 @@ module.exports = {
       newConfig.resolve.alias['@/templates'] = path.resolve(__dirname, '../src/components/templates')
       newConfig.resolve.alias['@/styles'] = path.resolve(__dirname, '../src/styles')
       newConfig.resolve.alias['@/helpers'] = path.resolve(__dirname, '../src/helpers')
+      newConfig.resolve.alias['@/utils'] = path.resolve(__dirname, '../src/utils')
 
       newConfig.module.rules = newConfig.module.rules.map((data) => {
          if (/svg\|/.test(String(data.test)))

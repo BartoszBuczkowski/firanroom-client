@@ -22,7 +22,8 @@
          "@/templates/*": ["src/components/templates/*"],
          "@/styles/*": ["./styles/*"],
          "@/helpers/*": ["src/helpers/*"],
-         "@/assets/*": ["src/assets/*"]
+         "@/assets/*": ["src/assets/*"],
+         "@/utils/*": ["src/utils/*"]
       }
    },
    "exclude": ["node_modules"],

@@ -1,5 +1,5 @@
 import { Meta, Story } from '@storybook/react/types-6-0'
-import _Header from './Header'
+import _Header from '../Header'
 
 export default {
    title: 'Organisms/Header',

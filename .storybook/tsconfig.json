@@ -26,7 +26,8 @@
          "@/molecules/*": ["src/components/molecules/*"],
          "@/organisms/*": ["src/components/organisms/*"],
          "@/templates/*": ["src/components/templates/*"],
-         "@/helpers/*": ["src/helpers/*"]
+         "@/helpers/*": ["src/helpers/*"],
+         "@/utils/*": ["src/utils/*"]
       }
    },
    "exclude": ["node_modules"],
