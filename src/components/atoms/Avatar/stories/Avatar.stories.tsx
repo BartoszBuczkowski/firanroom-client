@@ -14,19 +14,20 @@ export default {
    ],
    argTypes: {
       image: {
-         type: 'string',
          defaultValue: faker.image.nature(),
       },
       name: {
          defaultValue: faker.random.word(),
       },
       withText: {
-         type: 'boolean',
+         defaultValue: true,
+      },
+      online: {
          defaultValue: true,
       },
    },
 } as Meta
 
-export const Avatar: Story<AvatarProps> = ({ image, name, withText }) => (
-   <_Avatar image={image} name={name} withText={withText} />
+export const Avatar: Story<AvatarProps> = ({ image, name, withText, online }) => (
+   <_Avatar image={image} name={name} withText={withText} online={online} />
 )
