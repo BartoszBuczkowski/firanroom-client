@@ -1,4 +1,4 @@
-import Header from '@/organisms/Header/Header'
+import Header from '@/organisms/header/Header'
 import { FC } from 'react'
 
 const MainLayout: FC = ({ children }) => {

@@ -27,7 +27,8 @@
          "@/organisms/*": ["src/components/organisms/*"],
          "@/templates/*": ["src/components/templates/*"],
          "@/helpers/*": ["src/helpers/*"],
-         "@/utils/*": ["src/utils/*"]
+         "@/utils/*": ["src/utils/*"],
+         "@/factories/*": ["src/factories/*"]
       }
    },
    "exclude": ["node_modules"],

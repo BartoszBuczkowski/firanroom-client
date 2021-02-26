@@ -23,7 +23,8 @@
          "@/styles/*": ["./styles/*"],
          "@/helpers/*": ["src/helpers/*"],
          "@/assets/*": ["src/assets/*"],
-         "@/utils/*": ["src/utils/*"]
+         "@/utils/*": ["src/utils/*"],
+         "@/factories/*": ["src/factories/*"]
       }
    },
    "exclude": ["node_modules"],
