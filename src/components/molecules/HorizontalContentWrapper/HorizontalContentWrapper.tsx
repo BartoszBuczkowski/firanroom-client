@@ -1,11 +1,16 @@
-import { FC } from 'react'
+import { FC, ReactNode } from 'react'
+import css from './HorizontalContentWrapper.module.scss'
+
+interface HorizontalContentWrapper {
+   children: ReactNode[]
+}
 
 const HorizontalContentWrapper: FC = ({ children }) => {
    return (
-      <div className="relative">
+      <div className={css.wrapper}>
          <button className="absolute">left</button>
          <button className="absolute">right</button>
-         {children}
+         <div className={css['wrapper-content']}>{children}</div>
       </div>
    )
 }
