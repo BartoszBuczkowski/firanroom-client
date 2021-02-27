@@ -1,6 +1,7 @@
+import { FC } from 'react'
 import logo from '@/assets/svg/logo.svg'
 
-const Header = () => {
+const Header: FC = () => {
    return (
       <div className="bg-white border-b border-gray-50">
          <div className="flex justify-between h-16 max-w-7xl m-auto">

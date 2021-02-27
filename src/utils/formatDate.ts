@@ -6,3 +6,8 @@ function formatDate(date: string): string {
 }
 
 export default formatDate
+
+export function test(e: boolean) {
+   if (e) return {}
+   return 'a'
+}
