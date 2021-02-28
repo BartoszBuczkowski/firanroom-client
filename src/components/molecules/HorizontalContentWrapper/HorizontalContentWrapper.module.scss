@@ -1,12 +1,7 @@
 .wrapper {
-   &-content {
-      width: 100%;
-      display: flex;
-      overflow-y: hidden;
-      overflow-x: scroll;
-   }
+   @apply w-full flex items-center overflow-y-hidden overflow-x-scroll;
 
    &::-webkit-scrollbar {
-      overflow: hidden;
+      @apply hidden;
    }
 }

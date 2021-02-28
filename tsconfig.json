@@ -4,6 +4,8 @@
       "module": "esnext",
       "jsx": "preserve",
       "strict": true,
+      "strictFunctionTypes": true,
+      "noImplicitAny": true,
       "esModuleInterop": true,
       "skipLibCheck": true,
       "forceConsistentCasingInFileNames": true,

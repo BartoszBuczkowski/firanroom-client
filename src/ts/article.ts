@@ -7,4 +7,5 @@ export interface Article {
    createdAt: string
    commentsNumber: number
    liked: boolean
+   tags: { id: number; name: string; link: string }[]
 }

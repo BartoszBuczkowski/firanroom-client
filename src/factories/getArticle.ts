@@ -1,3 +1,4 @@
+import makeArray from '@/utils/makeArray'
 import faker from 'faker'
 import { Article } from 'src/ts/article'
 
@@ -11,6 +12,11 @@ function getArticle(): Article {
       createdAt: new Date().toJSON(),
       commentsNumber: faker.random.number(100),
       liked: faker.random.arrayElement([true, false]),
+      tags: makeArray(25, () => ({
+         id: faker.random.number(),
+         link: faker.internet.url(),
+         name: '#' + faker.random.word(),
+      })),
    }
 }
 
