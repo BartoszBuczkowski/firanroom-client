@@ -1,7 +1,19 @@
 .wrapper {
-   @apply w-full flex items-center overflow-y-hidden overflow-x-scroll;
+   @apply relative w-full;
 
-   &::-webkit-scrollbar {
-      @apply hidden;
+   &-content {
+      @apply w-full flex items-center overflow-y-hidden overflow-x-scroll;
+
+      &::-webkit-scrollbar {
+         @apply hidden;
+      }
+   }
+
+   &-button {
+      @apply absolute opacity-0 pointer-events-none transition-all delay-75 cursor-pointer text-center select-none;
+   }
+
+   &:hover &-button {
+      @apply opacity-100 h-full z-10 pointer-events-auto;
    }
 }

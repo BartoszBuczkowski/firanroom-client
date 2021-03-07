@@ -4,7 +4,7 @@ import clsx from 'clsx'
 export interface AvatarProps {
    image: string
    name: string
-   online?: boolean
+   online: boolean | undefined
    withText?: boolean
 }
 
@@ -14,12 +14,16 @@ const Avatar: FC<AvatarProps> = ({ image, name, withText, online }) => {
    return (
       <div className="flex items-center relative">
          {image ? <img src={image} className={imageClassNames} /> : <div className={imageClassNames} />}
-         <span
-            className={clsx('absolute w-3 h-3 left-0 bottom-0 rounded-full ring-2 ring-white', {
-               'bg-gray-50': !online,
-               'bg-green': online,
-            })}
-         />
+
+         {online !== undefined && (
+            <span
+               className={clsx('absolute w-3 h-3 left-0 bottom-0 rounded-full ring-2 ring-white', {
+                  'bg-gray-50': !online,
+                  'bg-green-400': online,
+               })}
+            />
+         )}
+
          {withText && <p className="ml-2 text-gray-800 font-medium">{name}</p>}
       </div>
    )

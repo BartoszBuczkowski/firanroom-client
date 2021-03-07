@@ -88,7 +88,9 @@ module.exports = {
       },
    },
    variants: {
-      extend: {},
+      extend: {
+         display: ['hover', 'focus'],
+      },
    },
    plugins: [],
 }
